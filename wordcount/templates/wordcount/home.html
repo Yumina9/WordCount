@@ -1,0 +1,21 @@
+{% extends 'wordcount/base.html' %} {% block content %}
+
+<div class="container">
+  <br />
+  <h1>WORD COUNT <span class="badge-pill badge-dark">신상오픈!</span></h1>
+
+  <a href="{% url 'about' %}">ABOUT</a>
+  <form action="{% url 'count' %}">
+    <div class="form-group"></div>
+    <textarea
+      class="form-control"
+      cols="40"
+      rows="10"
+      name="fulltext"
+    ></textarea>
+    <br />
+    <input class="btn btn-outline-dark" type="submit" value="Count!" />
+  </form>
+</div>
+
+{% endblock %}
